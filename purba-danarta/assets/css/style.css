@@ -1,0 +1,486 @@
+/* ============================
+   STYLE.CSS - Disesuaikan dengan Desain Figma
+   ============================ */
+
+/* Font & Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* ============================
+   NAVBAR (Tidak Diubah Sesuai Permintaan)
+   ============================ */
+.navbar-custom {
+    background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.navbar-custom .navbar-brand img {
+    max-height: 40px;
+}
+.navbar-custom .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+.navbar-custom .nav-link:hover {
+    color: #dceeff !important;
+}
+.navbar-custom .btn-outline-light {
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+.navbar-custom .btn-outline-light:hover {
+    background-color: #fff;
+    color: #0d6efd;
+}
+.navbar-custom .dropdown-menu {
+    background: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 8px;
+}
+.navbar-custom .dropdown-item {
+    color: #333;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+.navbar-custom .dropdown-item:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* ============================
+   MAIN BACKGROUND & CONTENT AREA (Diubah Sesuai Figma)
+   ============================ */
+.main-background {
+    min-height: 100vh;
+    /* GANTI URL GAMBAR INI dengan URL gambar latar belakang Anda */
+   background: url('../img/brd.jpeg') center center/cover no-repeat;
+    padding: 40px 0; /* Memberi jarak atas dan bawah */
+}
+
+/* Menghapus overlay putih yang menutupi seluruh layar */
+.main-background .overlay {
+    background: none;
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Container utama yang menjadi kotak putih di tengah */
+.main-background .container {
+    background: rgba(255, 255, 255, 0.95); /* Latar belakang putih semi-transparan */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 30px; /* Padding untuk konten di dalamnya */
+}
+
+
+/* ============================
+   CARD STYLE (Disesuaikan)
+   ============================ */
+.card {
+    border: 1px solid #e9ecef; /* Menambahkan border tipis seperti di Figma */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #ffffff; /* Memastikan kartu berwarna putih solid */
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.card-title {
+    font-weight: 600;
+}
+
+/* ============================
+   BUTTON CUSTOM (Disesuaikan)
+   ============================ */
+.btn-custom-green {
+    background-color: #198754;
+    color: #fff;
+    border-radius: 6px; /* Membuat sudut lebih tajam seperti di Figma */
+    padding: 6px 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.btn-custom-green:hover {
+    background-color: #145c32;
+    color: #fff;
+}
+
+/* ============================
+   TABLE STYLE (Disesuaikan)
+   ============================ */
+.table thead {
+    background-color: transparent; /* Menghapus latar belakang biru pada header tabel */
+    color: #212529; /* Mengubah warna teks header menjadi gelap */
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,0.05); /* Sedikit menggelapkan baris saat di-hover */
+}
+
+/* ============================
+   HEADER TEXT (Disesuaikan)
+   ============================ */
+h2, h4, h5 {
+    color: #343a40; /* Mengubah warna header dari biru menjadi abu-abu gelap */
+    font-weight: 600;
+}
+
+/* ============================
+   CONTENT CONTAINER (Disesuaikan)
+   ============================ */
+/* Menghapus style container terpisah untuk tabel agar menyatu dengan latar belakang utama */
+.content-container {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* ============================
+   (Sisa kode CSS tidak diubah)
+   KALENDER STYLES, MODAL, RESPONSIVE, DLL.
+   ============================ */
+.calendar-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+}
+
+/* Header Kalender */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.calendar-title {
+    color: #0d6efd;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar-nav button {
+    padding: 8px 16px;
+    border: 2px solid #0d6efd;
+    background: white;
+    color: #0d6efd;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.calendar-nav button.active,
+.calendar-nav button:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+/* Grid Kalender */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e9ecef;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header Hari */
+.calendar-day-header {
+    background: #0d6efd;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Hari dalam Kalender */
+.calendar-day {
+    background: white;
+    min-height: 120px;
+    padding: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #f8f9fa;
+}
+
+.calendar-day:hover {
+    background: #f8f9ff;
+    transform: scale(1.02);
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-day.other-month {
+    background: #f8f9fa;
+    color: #adb5bd;
+}
+
+.calendar-day.holiday {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    position: relative;
+}
+
+/* Nomor Hari */
+.day-number {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.calendar-day.other-month .day-number {
+    color: #adb5bd;
+}
+
+.calendar-day.holiday .day-number {
+    color: #dc3545;
+}
+
+/* Indicator Hari Libur */
+.holiday-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: #dc3545;
+    border-radius: 50%;
+}
+
+.day-holiday {
+    font-size: 0.7rem;
+    color: #dc3545;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Daftar Event */
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.event-item {
+    background: #e7f1ff;
+    border-left: 3px solid #0d6efd;
+    padding: 4px 8px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #495057;
+}
+
+.event-item:hover {
+    background: #0d6efd;
+    color: white;
+    transform: translateX(2px);
+}
+
+/* Warna Event Berdasarkan Status/Tipe */
+.event-item[data-status="approved"],
+.event-item[data-type="annual"] {
+    border-left-color: #198754;
+    background: #d1f2eb;
+}
+
+.event-item[data-status="pending"],
+.event-item[data-type="emergency"] {
+    border-left-color: #fd7e14;
+    background: #ffeaa7;
+}
+
+.event-item[data-status="rejected"],
+.event-item[data-type="sick"] {
+    border-left-color: #dc3545;
+    background: #f8d7da;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Modal Styling */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border: none;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.employee-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.employee-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.employee-name {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 5px;
+}
+
+/* Content Container */
+.content-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+        font-size: 0.8rem;
+    }
+    
+    .calendar-day {
+        min-height: 80px;
+        padding: 4px;
+    }
+    
+    .day-number {
+        font-size: 0.9rem;
+    }
+    
+    .event-item {
+        font-size: 0.65rem;
+        padding: 2px 4px;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .calendar-nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .legend {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+/* ============================
+   FULLCALENDAR CUSTOM STYLES
+   ============================ */
+
+/* Mengubah tampilan default event FullCalendar */
+.fc-daygrid-event {
+    padding: 4px 8px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #212529 !important; /* Warna teks gelap agar terbaca */
+    font-weight: 500;
+}
+
+/* Warna untuk event Cuti Tahunan & KHL Disetujui */
+.fc-event.event-annual,
+.fc-event.event-approved {
+    background-color: #d1f2eb !important;
+    border-color: #198754 !important;
+}
+
+/* Warna untuk event Cuti Sakit & KHL Ditolak */
+.fc-event.event-sick,
+.fc-event.event-rejected {
+    background-color: #f8d7da !important;
+    border-color: #dc3545 !important;
+}
+
+/* Warna untuk event Cuti Darurat & KHL Menunggu */
+.fc-event.event-emergency,
+.fc-event.event-pending {
+    background-color: #fff3cd !important;
+    border-color: #ffc107 !important;
+}
+
+/* Mengubah warna tombol navigasi kalender */
+.fc .fc-button-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}

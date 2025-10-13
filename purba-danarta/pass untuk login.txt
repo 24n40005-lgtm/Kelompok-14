@@ -1,0 +1,25 @@
+Username: aan9006     Password: password123
+Username: caca9107    Password: password123  
+Username: ady9208     Password: password123
+Username: siti9309    Password: password123
+Role: Pilih "Karyawan"
+
+PENANGGUNG JAWAB:
+Username: naupal8503
+Password: pj123
+Role: Pilih "Penanggung Jawab"
+
+KARYAWAN:
+Username: bian9202
+Password: karyawan123  
+Role: Pilih "Karyawan"
+
+ADMIN:
+Username: malcolm8804
+Password: admin123
+Role: Pilih "Administrator"
+
+DIREKSI:
+Username: budi7805
+Password: direksi123
+Role: Pilih "Direksi"
